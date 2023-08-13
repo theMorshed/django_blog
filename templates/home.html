@@ -4,8 +4,8 @@
 {% endblock %}
 
 {% block content %}
-    {% for blog in blog_list %}
-        <a class="link" href='#'>{{blog.title}}</a>
+    {% for blog in blogmodel_list %}
+        <a class="link" href="{% url 'blog' pk=blog.pk %}">{{blog.title}}</a>
         <p>{{blog.description}}</p>
     {% endfor %}
 {% endblock %}
